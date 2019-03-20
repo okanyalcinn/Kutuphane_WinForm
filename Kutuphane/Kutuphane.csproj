@@ -1,0 +1,673 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D95239C6-A05D-418A-A275-A15B0CBECDF8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Kutuphane</RootNamespace>
+    <AssemblyName>Kutuphane</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdresEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdresEkle.Designer.cs">
+      <DependentUpon>FormAdresEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKitapDuzelt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKitapDuzelt.Designer.cs">
+      <DependentUpon>FormKitapDuzelt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKitapEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKitapEkle.Designer.cs">
+      <DependentUpon>FormKitapEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUyeGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUyeGuncelle.Designer.cs">
+      <DependentUpon>FormUyeGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormYeniKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormYeniKayit.Designer.cs">
+      <DependentUpon>FormYeniKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdresEkle.resx">
+      <DependentUpon>FormAdresEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKitapDuzelt.resx">
+      <DependentUpon>FormKitapDuzelt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKitapEkle.resx">
+      <DependentUpon>FormKitapEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUyeGuncelle.resx">
+      <DependentUpon>FormUyeGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormYeniKayit.resx">
+      <DependentUpon>FormYeniKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-alt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\access.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\access-alt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-window.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alert.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-alt1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button blue alt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button green alt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button red alt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-green.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-red.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-withe.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-yellow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cal.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CD.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CD-burn.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CD-Music.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffe.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpu.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db-add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db-download.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db-remove.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db-upload.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db-web.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-alt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DJ-off.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DJ-on.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down-alt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emoticon-1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emoticon-2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emoticon-3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emoticon-4.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emoticon-5.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emoticon-6.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emoticon-7.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emoticon-8.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emoticon-9.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emoticon-10.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emoticon-11.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emoticon-12.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\euro.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exclamation.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\faq.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favorites.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favorites-add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fax.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-copy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-doc.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-down.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-new.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-blue rename.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-blue up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-blue-down.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-blue-image.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-image.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-white up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-white.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-white-down.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-white-rename.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward-alt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HD.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HD-down.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HD-share.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HD-up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ipod-off.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ipod-on.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Layer 4.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ligth-off.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ligth-on.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail-edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\misc.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\misc-blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\misc-green.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\misc-red.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\misc-yellow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\module.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor-off.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor-on.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\offert.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package-add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package-down.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Package-remove.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package-up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone-blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone-green.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone-red.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone-yellow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-back.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-first.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-forward.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-options.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-pause.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-rec.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-repeat.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-star.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-stop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preferences.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print-preview.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\public.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload-alt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove-window.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save copy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-alt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveas-alt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-copy-alt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-file.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-web.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\server.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sound.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistic.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status-off.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status-on.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop-alt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tools.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-empty.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-full.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unlock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up-alt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upload.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vcard.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\web.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\web-ftp.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wireless-blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wireless-green.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wireless-red.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wireless-yellow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom-.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom+.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
