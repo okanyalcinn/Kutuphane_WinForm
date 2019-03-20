@@ -1,4 +1,4 @@
-# Kütüphane Kitap Takibi
+# Kütüphane Kitap Takibi  :books:
 
 **C#** programlama dilini kullanarak hazırladığım **WinForm** uygulaması hakkında bilgi vermek istiyorum.
 
@@ -15,7 +15,7 @@ Veri tabanında silinen kayıtların **trigger** yardımı ile silinenler tablos
 - Emanet kitap takibi (Emanet ver/ geri al)
 işlemleri yer almakta.
 
-## SQL içeriği
+## SQL içeriği :twisted_rightwards_arrows:
 Toplamda 14 tablo arasında ilişkilendirilme yapılarak kontrol sağlandı. **Normalizasyon** kurallarına uyarak tablo düzeni oluşturdum.
 
 **Stored Procedure** 
@@ -30,7 +30,7 @@ SQL veri tabanından silinen verilerin kaybını önlemek için 4 adet trigger k
 
 Data Grid View içeriğine SQL de bulunan tablo içeriğini aktarmak için 7 adet view kullanıldı.
 
-## C# içeriği
+## C# içeriği :white_check_mark:
 17 adet method ile kod tekrarının önüne geçildi. Bunların 3 tanesini aşırı yüklemeli olarak tasarladım.
 
 Formlar arası geçiş ile kullanıcı dostu bir uygulama tasarladım. İncelemenizi öneririm. Zaman ayırdığınız için teşekkürler :slightly_smiling_face:
